@@ -95,7 +95,7 @@ They can be used to inform targeted crime prevention strategies or future predic
 **Mohamed Eswai**  
 📍 Granada, Spain  
 📧 eswai.mo@outlook.com 
-<a href="https://www.linkedin.com/in/mohamed-eswai-31207b372/" target="_blank">LinkedIn Profile</a>
+"https://www.linkedin.com/in/mohamed-eswai-31207b372/"
 
 
 > Thank you for reviewing this project. Feel free to connect or reach out for collaboration, freelance opportunities, or feedback.
