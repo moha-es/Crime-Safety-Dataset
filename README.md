@@ -91,9 +91,9 @@ They can be used to inform targeted crime prevention strategies or future predic
 
 ## 👤 About the Author
 
-**Mohamed Eswai**
-📍 Based in Spain | Open to remote opportunities  
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/mohamed-eswai-31207b372/)  
-📧 rca16961@gmail.com
+**Mohamed Eswai**  
+📍 Granada, Spain  
+📧 eswai.mo@outlook.com
+🔗 [LinkedIn](#) *(https://www.linkedin.com/in/mohamed-eswai-31207b372/)*
 
 
