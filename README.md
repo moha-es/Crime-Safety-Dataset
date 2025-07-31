@@ -1,17 +1,18 @@
 # 🕵️ Crime & Safety Dataset Analysis (SQL Project)
 
 This project explores a dataset of 1,000 real crime reports collected over two years in an urban area.  
-Each record contains details such as the crime type, location, time, and victim demographics including age, gender, and race.  
-The project uses SQL to uncover patterns in crime frequency, time of day, demographics, and location.
+Each record contains the crime type, time, location, and victim demographics such as age, gender, and race.
+
+The goal of this analysis is to uncover patterns related to demographics, crime frequency, and locations using SQL.
 
 ---
 
 ## 🎯 Objectives
 
-- Identify patterns in crime by time of day
-- Analyze crimes based on victim gender, age, and race
-- Compare crime rates across cities and crime types
-- Highlight crimes involving minors or older populations
+- Identify peak hours and dates for crime
+- Analyze crimes by victim age, race, and gender
+- Compare crime volume by city and crime type
+- Highlight crimes involving vulnerable age groups (minors, elderly)
 
 ---
 
@@ -19,47 +20,80 @@ The project uses SQL to uncover patterns in crime frequency, time of day, demogr
 
 | File | Description |
 |------|-------------|
-| `crime_safety_dataset.csv`| Raw dataset from Kaggle |
-| `crimes_by_city.sql` | Query for crime totals by city |
-| `crimes_by_city.png` | Chart showing total crimes per city |
-| `crimes_involving_Victims Under 18.png` | Crimes involving victims under age 18 |
-| `Crimes_against_Race_Groups_by_Type.png` | Crime types affecting racial groups |
-| `crime_type_by_avg_age.png` | Average victim age by crime type |
-| `crimes_time_day.png` | Crime frequency by hour of day |
+| `crime_safety_dataset.csv` | Raw dataset from Kaggle |
+| PNG charts below | Visual summaries of SQL query results |
 
 ---
 
-## 📊 Key Insights from SQL Analysis
+## 📊 Visual Insights
 
 ### 📍 Crimes by City
-- **Houston** recorded the highest number of crimes in the dataset, with a total of 106 incidents.
-- Query grouped records by `city` and counted total entries.
+
+Houston recorded the highest number of crimes in the dataset with a total of 106.
+
+![Crimes by City](crimes_by_city.png)
+
+---
 
 ### 👶 Crimes Involving Victims Under 18
-- **Assault** was the most common crime among minors, with **9 victims under age 18**.
-- Query filtered rows where `victim_age < 18`.
 
-### 🧑‍🦳 Average Victim Age by Crime Type
-- **Vandalism** had the highest average victim age: **56.4 years**.
-- Suggests older individuals are more affected by property-related crimes.
+Assault was the most reported crime involving minors, with **9 victims** under the age of 18.
+
+![Crimes Involving Victims Under 18](crimes_involving_Victims%20Under%2018.png)
+
+---
 
 ### 🧑🏽 Crimes Against Racial Groups by Type
-- **Robbery** was the most reported crime for **Asian victims**, with **32 incidents**.
-- Query grouped by `victim_race` and `crime_type`.
 
-### 🕒 Crime by Time of Day
-- Most crimes occurred around **18:00 (6 PM)** with a peak of **54 incidents**.
-- Surprisingly, **44 crimes** also occurred during the **00:00 hour (midnight)**.
-- Query extracted the hour from the time column using `SUBSTR(time, 1, 2)`.
+Among **Asian victims**, robbery was the most common crime, with **32 incidents**.
+
+![Crimes Against Race Groups by Type](Crimes_against%20Race_Groups_by_%20Type.png)
+
+---
+
+### 🧓 Average Victim Age by Crime Type
+
+**Vandalism** affected the oldest age group, with an average victim age of **56.4 years**.
+
+![Average Victim Age by Crime Type](crime_type_by_%20avg%20age.png)
+
+---
+
+### 🕒 Crimes by Time of Day
+
+Most crimes occurred at **18:00 (6 PM)** with a peak of **54 incidents**, followed by **44 at midnight (00:00)**.
+
+![Crimes by Time of Day](crimes_time_day.png)
 
 ---
 
 ## 🧠 Example SQL Query
 
 ```sql
--- Crimes by gender and city
 SELECT city, victim_gender, crime_type, COUNT(*) AS total
-FROM crimes
-WHERE victim_gender IS NOT NULL
+FROM crime_safety_dataset
 GROUP BY city, victim_gender, crime_type
 ORDER BY city, total DESC;
+---
+
+## 📈 Summary of Key Insights
+
+- 🔹 **Houston** had the highest crime volume with **106 total incidents**
+- 🔹 **Assault** was the most common crime among minors, with **9 victims under 18**
+- 🔹 **Vandalism** targeted older individuals the most (average age **56.4 years**)
+- 🔹 **Asian victims** reported **32 cases** of **robbery** — the highest for that group
+- 🔹 Crimes peaked at **18:00 (6 PM)** with a secondary peak at **00:00 (midnight)**
+
+These insights were discovered using SQL (SQLite) and visualized using simple charts.  
+They can be used to inform targeted crime prevention strategies or future predictive models.
+
+---
+
+## 👤 About the Author
+
+**Mohamed Eswai**
+📍 Based in Spain | Open to remote opportunities  
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/mohamed-eswai-31207b372/)  
+📧 rca16961@gmail.com
+
+
