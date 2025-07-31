@@ -89,16 +89,15 @@ They can be used to inform targeted crime prevention strategies or future predic
 
 ---
 
-## 📫 Contact
+
+## 👤 About the Author
 
 **Mohamed Eswai**  
 📍 Granada, Spain  
 📧 m.eswai@icloud.com  
-🔗 [LinkedIn](#) *(https://www.linkedin.com/in/mohamed-eswai-31207b372/)*
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/mohamed-eswai-31207b372/)
 
-
-
----
+> Thank you for reviewing this project. Feel free to connect or reach out for collaboration, freelance opportunities, or feedback.
 
 
 
